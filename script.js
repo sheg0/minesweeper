@@ -234,7 +234,7 @@ const minesweeper = {
 
         let popupText = document.createElement("div");
         popupText.classList.add("popupText");
-        hasPlayerWon ? popupText.innerHTML = "You won" : popupText.innerHTML = "You lose";
+        hasPlayerWon ? popupText.innerHTML = "You won 🎊" : popupText.innerHTML = "You lose 👽";
 
         popup.appendChild(popupText);
         document.getElementById("playfield").appendChild(popup);

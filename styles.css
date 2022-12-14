@@ -1,0 +1,204 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: monospace, monospace;
+}
+
+:root {
+    --title-color: #f78a49;
+    --background-color: #419a9e;
+    --buttonbar-color: #C41905;
+    --footer-color: #4c5260;
+    --shadowsize: 4px;
+    --shadowcolor: rgb(100, 100, 100);
+    --highlightcolor: rgb(255, 255, 255);
+    --background-image-position: 11.11111111111111%;
+}
+
+html, body {
+    height: 100%;
+    background-color: var(--background-color);
+}
+
+.content {
+    width: min(100vw, 55vh);
+    height: min(100vh, 180vw);
+    margin: 0 auto;
+}
+
+header {
+    height: 22.3%;
+    background-color: var(--background-color);
+    background-size: 90%;
+    text-align: center;
+}
+
+h1, h2, h3 {
+    color: #000000;
+    text-align: center;
+}
+
+h1 {
+    font-size: 300%;
+}
+
+h2 {
+    font-size: 180%;
+}
+
+h3 {
+    font-size: 18px;
+    color: lightgrey !important;
+}
+
+#playfield {
+    height: 55.5%;
+    background-color: darkgrey;
+    display: flex;
+    justify-content: space-evenly;
+    align-content: space-between;
+    flex-wrap: wrap;
+    flex-shrink: 1;
+}
+
+#buttonbar {
+    height: 16.6%;
+    background-color: var(--buttonbar-color);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+button {
+    background-color: lightgrey;
+    height: 30%;
+    width: 30%;
+    font-size: 130%;
+    border-radius: 0.5em;
+    border-width: thin;
+}
+
+footer {
+    height: 5.6%;
+    background-color: var(--footer-color);
+    color: whitesmoke;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    text-align: center;
+}
+
+.cell {
+    width: calc(100% / 9 - 2px - (2 * var(--shadowsize)));
+    height: calc(100% / 9 - 2px - (2 * var(--shadowsize)));
+    background-color: rgb(198, 198, 198);
+    border: var(--shadowsize) solid rgb(198, 198, 198);
+    border-radius: 10%;
+}
+
+.covered {
+    border-top: var(--shadowsize) solid var(--highlightcolor);
+    border-left: var(--shadowsize) solid var(--highlightcolor);
+    border-bottom: var(--shadowsize) solid var(--shadowcolor);
+    border-right: var(--shadowsize) solid var(--shadowcolor);
+}
+
+.symbol1 {
+    background-image: url('images/symbols.svg');
+    background-size: 1000%;
+}
+
+.symbol2 {
+    background-image: url('images/symbols.svg');
+    background-size: 1000%;
+    /* Iteration 100 / 9 = 11.111.. */
+    background-position: var(--background-image-position);
+}
+
+.symbol3 {
+    background-image: url('images/symbols.svg');
+    background-size: 1000%;
+    /* Iteration 100 / 9 = 11.111.. */
+    background-position: calc(2 * (var(--background-image-position)));
+}
+
+.symbol4 {
+    background-image: url('images/symbols.svg');
+    background-size: 1000%;
+    /* Iteration 100 / 9 = 11.111.. */
+    background-position: calc(3 * (var(--background-image-position)));
+}
+
+.symbol5 {
+    background-image: url('images/symbols.svg');
+    background-size: 1000%;
+    /* Iteration 100 / 9 = 11.111.. */
+    background-position: calc(4 * (var(--background-image-position)));
+}
+
+.symbol6 {
+    background-image: url('images/symbols.svg');
+    background-size: 1000%;
+    /* Iteration 100 / 9 = 11.111.. */
+    background-position: calc(5 * (var(--background-image-position)));
+}
+
+.symbol7 {
+    background-image: url('images/symbols.svg');
+    background-size: 1000%;
+    /* Iteration 100 / 9 = 11.111.. */
+    background-position: calc(6 * (var(--background-image-position)));
+}
+
+.symbol8 {
+    background-image: url('images/symbols.svg');
+    background-size: 1000%;
+    /* Iteration 100 / 9 = 11.111.. */
+    background-position: calc(7 * (var(--background-image-position)));
+}
+
+.symbolflag {
+    background-image: url('images/symbols.svg');
+    background-size: 1000%;
+    /* Iteration 100 / 9 = 11.111.. */
+    background-position: calc(8 * (var(--background-image-position)));
+}
+
+.symbolbomb {
+    background-image: url('images/symbols.svg');
+    background-size: 1000%;
+    /* Iteration 100 / 9 = 11.111.. */
+    background-position: calc(9 * (var(--background-image-position)));
+}
+
+.symbolhitbomb {
+    background-color: #ff0000;
+    border-color: #ff0000;
+}
+
+.popup {
+    width: min(100vw, 55vh);
+    height: calc((100% / 18) * 10);
+    background-color: rgba(0, 0, 0, 0.7);
+    position: absolute;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.popupText {
+    width: 50%;
+    margin: 0 auto;
+    padding: 3em;
+    text-align: center;
+    font-size: 32pt;
+    border-radius: 1em;
+    border: 1px solid rgb(112, 112, 112);
+    background-color: var(--highlightcolor);
+}
+
+@media (min-width: 480px) {
+    header {
+        background-image: linear-gradient(rgba(255, 255, 255, 0.32), rgba(255, 255, 255, 0.32)), url('images/submarines.jpg');
+    }
+}

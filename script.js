@@ -47,7 +47,7 @@ const minesweeper = {
         myHeader.appendChild(heading1);
 
         const heading2 = document.createElement('h2');
-        heading2.innerText = "by Esra Balci";
+        heading2.innerText = "by sheg0";
         myHeader.appendChild(heading2);
 
         return myHeader;
